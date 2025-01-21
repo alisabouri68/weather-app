@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Weather App</title>
+</head>
+
+<body>
+  <!-- <script>
+    async function getData() {
+      const url = 'https://api.openweathermap.org/data/2.5/weather?q=Tehran&lang=fa&appid=ef75e629c69e7b307a0cbabfa7f67968';
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+
+        const json = await response.json();
+        console.log(json);
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    getData()
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+        console.log('عرض جغرافیایی: ' + lat);
+        console.log('طول جغرافیایی: ' + lon);
+      },
+        function (error) {
+          console.error('خطا در دریافت موقعیت جغرافیایی: ' + error.message);
+
+        });
+    } else {
+      console.error('مرورگر شما از Geolocation API پشتیبانی نمی‌کند.');
+    }
+    fetch('https://restcountries.com/v3.1/name/iran')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('There has been a problem with your fetch operation:', error);
+  });
+  </script> -->
+</body>
+ّ
+
+</html>
