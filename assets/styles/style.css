@@ -377,32 +377,36 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
-    --color-2E2857: #2E2857;
-    --color-8C86B2: #8C86B2;
-    --color-1F1B3D: #1F1B3D;
-    --color-7263DA: #7263DA;
-    --color-D9D9D9: #D9D9D9;
+    --color-2E2857: #2e2857;
+    --color-8C86B2: #8c86b2;
+    --color-1F1B3D: #1f1b3d;
+    --color-7263DA: #7263da;
+    --color-D9D9D9: #d9d9d9;
     --color-605893: #605893;
-    --color-FFFFFF: #FFFFFF;
-    --color-8A81C5: #8A81C5;
-    --color-8270FA: #8270FA;
-    --color-816FF9: #816FF9;
-    --color-3F3775: #3F3775;
-    --color-CCCCCC: #CCCCCC;
-    --color-3D357B: #3D357B;
-    --color-7D6E6E: #7D6E6E;
-    --color-8A7D80: #8A7D80;
-    --color-9F9E9E: #9F9E9E;
-    --color-463D86: #463D86;
-    --color-1C1838: #1C1838;
-    --color-7D6FDE: #7D6FDE;
-    --color-6D6795: #6D6795;
-    --color-BEB4FE: #BEB4FE;
-    --color-7465DC: #7465DC;
-    --color-C0BECD: #C0BECD;
-    --color-918EAB: #918EAB;
-    --color-55AAFF: #55AAFF;
-    --color-706A98: #706A98;
+    --color-FFFFFF: #ffffff;
+    --color-8A81C5: #8a81c5;
+    --color-8270FA: #8270fa;
+    --color-816FF9: #816ff9;
+    --color-3F3775: #3f3775;
+    --color-CCCCCC: #cccccc;
+    --color-3D357B: #3d357b;
+    --color-7D6E6E: #7d6e6e;
+    --color-8A7D80: #8a7d80;
+    --color-9F9E9E: #9f9e9e;
+    --color-463D86: #463d86;
+    --color-1C1838: #1c1838;
+    --color-7D6FDE: #7d6fde;
+    --color-6D6795: #6d6795;
+    --color-BEB4FE: #beb4fe;
+    --color-7465DC: #7465dc;
+    --color-C0BECD: #c0becd;
+    --color-918EAB: #918eab;
+    --color-55AAFF: #55aaff;
+    --color-706A98: #706a98;
+    --color-1A1635: #1a1635;
+    --color-7768E3: #7768e3;
+    --color-D4CEFF: #d4ceff;
+    --spacing-50z: -20%;
   }
 }
 @layer base {
@@ -547,12 +551,116 @@
   }
 }
 @layer utilities {
-  .relative {
-    position: relative;
+  .absolute {
+    position: absolute;
   }
-  .block {
-    display: block;
+  .top-0 {
+    top: calc(var(--spacing) * 0);
   }
+  .top-50z {
+    top: var(--spacing-50z);
+  }
+  .right-50z {
+    right: var(--spacing-50z);
+  }
+  .bottom-50z {
+    bottom: var(--spacing-50z);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .left-50z {
+    left: var(--spacing-50z);
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-20 {
+    z-index: 20;
+  }
+  .z-30 {
+    z-index: 30;
+  }
+  .flex {
+    display: flex;
+  }
+  .h-\[30vw\] {
+    height: 30vw;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .w-\[30vw\] {
+    width: 30vw;
+  }
+  .w-screen {
+    width: 100vw;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .bg-2E2857 {
+    background-color: var(--color-2E2857);
+  }
+  .bg-D4CEFF {
+    background-color: var(--color-D4CEFF);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .\*\:relative {
+    :is(& > *) {
+      position: relative;
+    }
+  }
+  .\*\:h-screen {
+    :is(& > *) {
+      height: 100vh;
+    }
+  }
+  .\*\:w-screen {
+    :is(& > *) {
+      width: 100vw;
+    }
+  }
+  .\*\:shrink-0 {
+    :is(& > *) {
+      flex-shrink: 0;
+    }
+  }
+  .\*\:bg-linear-to-b {
+    :is(& > *) {
+      --tw-gradient-position: to bottom in oklab,;
+      background-image: linear-gradient(var(--tw-gradient-stops));
+    }
+  }
+  .\*\:from-1A1635 {
+    :is(& > *) {
+      --tw-gradient-from: var(--color-1A1635);
+      --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    }
+  }
+  .\*\:via-7263DA {
+    :is(& > *) {
+      --tw-gradient-via: var(--color-7263DA);
+      --tw-gradient-via-stops: var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-via-stops);
+    }
+  }
+}
+.modal-start > div {
+  background: linear-gradient( 180deg, rgba(26, 22, 53, 1) 0%, rgba(46, 40, 87, 1) 31%, rgba(119, 104, 227, 1) 100% );
+}
+.modal-start {
+  transition: transform 0.5s ease-in-out;
+}
+.slides-start-active {
+  cursor: grabbing;
 }
 @keyframes spin {
   to {
@@ -579,4 +687,46 @@
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
 }

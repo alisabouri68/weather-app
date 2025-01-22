@@ -4,55 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="assets/styles/style.css">
   <title>Weather App</title>
 </head>
 
-<body>
-  <!-- <script>
-    async function getData() {
-      const url = 'https://api.openweathermap.org/data/2.5/weather?q=Tehran&lang=fa&appid=ef75e629c69e7b307a0cbabfa7f67968';
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error(`Response status: ${response.status}`);
-        }
-
-        const json = await response.json();
-        console.log(json);
-      } catch (error) {
-        console.error(error.message);
-      }
-    }
-    getData()
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        var lat = position.coords.latitude;
-        var lon = position.coords.longitude;
-        console.log('عرض جغرافیایی: ' + lat);
-        console.log('طول جغرافیایی: ' + lon);
-      },
-        function (error) {
-          console.error('خطا در دریافت موقعیت جغرافیایی: ' + error.message);
-
-        });
-    } else {
-      console.error('مرورگر شما از Geolocation API پشتیبانی نمی‌کند.');
-    }
-    fetch('https://restcountries.com/v3.1/name/iran')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('There has been a problem with your fetch operation:', error);
-  });
-  </script> -->
+<body class="overflow-hidden w-screen h-screen">
+  <!-- استارت اولیه برنامه که برای بار اول نمایش داده میشود -->
+  <div
+    class="slides-start w-screen h-screen absolute top-0 left-0 flex *:shrink-0 *:bg-linear-to-b *:from-1A1635 *:via-7263DA *:w-screen *:h-screen *:relative">
+    <!--  صفحه اول -->
+    <div class="z-30 one overflow-hidden">
+      11111111111111111111111111111111111111111111111111111111
+      <div class="w-[30vw] h-[30vw] flex rounded-full absolute top-50z left-50z  bg-D4CEFF"></div>
+      <div class="w-[30vw] h-[30vw] flex rounded-full absolute bottom-50z right-50z  bg-2E2857"></div>
+    </div>
+    <!-- صفحه دوم-->
+    <div class="z-20 overflow-hidden">
+      <div class="w-[30vw] h-[30vw] flex rounded-full absolute top-50z left-50z  bg-D4CEFF"></div>
+      <div class="w-[30vw] h-[30vw] flex rounded-full absolute bottom-50z right-50z  bg-2E2857"></div>
+      2222222222222222222222222222222222
+    </div>
+    <!-- صفحه سوم-->
+    <div class="z-10 overflow-hidden">
+      3333333333333333333333333333333333333333333333333333333333333333333
+      <div class="w-[30vw] h-[30vw] flex rounded-full absolute top-50z left-50z  bg-D4CEFF"></div>
+      <div class="w-[30vw] h-[30vw] flex rounded-full absolute bottom-50z right-50z  bg-2E2857"></div>
+    </div>
+  </div>
+  <script src="assets/script/app.js"></script>
 </body>
 ّ
 
