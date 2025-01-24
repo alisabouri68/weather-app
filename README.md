@@ -17,7 +17,7 @@ Preview screenshot
 
 * * *
 
-![Image](![Image](https://github.com/user-attachments/assets/4bc0fbdc-fcbb-49a2-9770-91aa68107064))
+![Image](https://github.com/user-attachments/assets/4bc0fbdc-fcbb-49a2-9770-91aa68107064)
 * * *
 
 Technologies used
