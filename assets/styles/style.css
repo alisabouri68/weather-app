@@ -1243,12 +1243,12 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-* {
+.container-c {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: scroll;
 }
-*::-webkit-scrollbar {
+.container-c::-webkit-scrollbar {
   display: none;
 }
 @keyframes spin {
