@@ -3,33 +3,249 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">  <link rel="stylesheet" href="assets/styles/style.css">
+  <meta name="theme-color" content="#29234e">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="assets/styles/style.css">
   <title>Weather App</title>
 </head>
 
-<body class="overflow-x-hidden w-screen h-screen">
+<body class="overflow-hidden min-w-screen max-w-screen min-h-screen max-h-screen bg-1F1B3D">
+  <svg class="hidden">
+    <symbol id="loc" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+    </symbol>
+    <symbol id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </symbol>
+    <symbol id="arrowUp" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+    </symbol>
+    <symbol id="arrowDown" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
+    </symbol>
+    
+  </svg>
+  <main class="min-w-screen max-w-screen min-h-screen max-h-screen overflow-hidden flex justify-center items-center">
+    <section
+      class="section min-w-screen max-w-screen min-h-screen max-h-screen overflow-hidden flex justify-start items-center flex-col *:w-full">
+      <!-- main top -->
+       <div class=" p-5 flex justify-around">
+        <div>
+          <button>
+            <span>
+              <svg class="w-8 h-8 text-BEB4FE">
+                <use href="#loc"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div>
+          <div class="text-BEB4FE font-semibold" id="uct">UCT </div>
+          <div id="time"></div>
+        </div>
+        <div>
+          <button>
+            <span>
+              <svg class="w-8 h-8 text-BEB4FE">
+                <use href="#menu"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+      <!-- main middle -->
+       <div class=" flex flex-col justify-center items-center gap-3">
+        <div class="">
+          <h3 class="text-[3vw] font-extrabold text-BEB4FE" id="city"></h3>
+        </div>
+        <div class="">
+          <h2 class="text-[5vw] font-extrabold text-BEB4FE" id="deg"></h2>
+        </div>
+        <div class="">
+          <span class="flex w-36 h-px bg-BEB4FE "></span>
+        </div>
+        <div class="">
+          <h4 class="text-[2vw] font-semibold text-2E2857" id="weatherdes"></h4>
+        </div>
+        <div class="flex justify-center items-center gap-5">
+          <div class="px-4 py-2  bg-CCCCCC rounded-3xl">
+            <span class="text-[4vw] font-extrabold "id="max"></span>
+          </div>
+          <div class="">
+            <span>
+              <svg class="w-8 h-8 text-1A1635  ">
+                <use href="#arrowUp"></use>
+              </svg>
+            </span>
+          </div>
+          <div class="">
+            <span>
+              <svg class="w-8 h-8 text-1A1635  ">
+                <use href="#arrowDown"></use>
+              </svg>
+            </span>
+          </div>
+          <div class="px-4 py-2  bg-CCCCCC rounded-3xl">
+            <span class="text-[4vw] font-extrabold "id="min"></span>
+          </div>
+        </div>
+      </div>
+      <!-- main bottom -->
+      <div class="">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div></div>
+      </div>
+    </section>
+  </main>
   <!-- استارت اولیه برنامه که برای بار اول نمایش داده میشود -->
   <div
-    class="slides-start w-screen h-screen absolute top-0 left-0 flex *:shrink-0 *:bg-linear-to-b *:from-1A1635 *:via-7263DA *:w-screen *:h-screen *:relative">
+    class="slides-start duration-1000 min-w-screen max-w-screen min-h-screen max-h-screen absolute overflow-x-hidden top-0 left-0 flex  *:shrink-0 *:bg-linear-to-b *:from-1A1635 *:via-7263DA *:w-screen *:h-screen *:relative">
     <!--  صفحه اول -->
-    <div class="z-30 one overflow-hidden">
-      11111111111111111111111111111111111111111111111111111111
-      <div class="w-[30vw] h-[30vw] flex rounded-full absolute top-50z left-50z  bg-D4CEFF"></div>
-      <div class="w-[30vw] h-[30vw] flex rounded-full absolute bottom-50z right-50z  bg-2E2857"></div>
+    <div
+      class="flex justify-center items-center z-30 one overflow-hidden min-w-screen max-w-screen min-h-screen max-h-screen"
+      style="overflow: hidden;">
+      <div class="flex flex-col justify-center items-center gap-2">
+        <div>
+          <figure>
+            <img src="assets/img/WE THER.png" alt="">
+          </figure>
+        </div>
+        <div class="flex justify-center items-center gap-12">
+          <div class="translate-[-20px , -35px]" style="transform: translate(35px,-35px);mix-blend-mode: overlay;">
+            <figure>
+              <img src="assets/img/A.png" alt="">
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img src="assets/img/PP.png" alt="">
+            </figure>
+          </div>
+        </div>
+        <div style="transform: translate(25px,-35px);">
+          <figure>
+            <img src="assets/img/Rectangle 1 (1).png" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="w-[300px] h-[300px] flex justify-end items-end rounded-full absolute top-50z left-50z  bg-D4CEFF">
+        <figure class="translate-10">
+          <img src="assets/img/bolt-isolated 2.png" alt="">
+        </figure>
+      </div>
+      <div class="w-[300px] h-[300px] flex rounded-full absolute bottom-50z right-50z  bg-2E2857">
+        <figure>
+          <img src="assets/img/clouds-snow.png" alt="">
+        </figure>
+      </div>
     </div>
     <!-- صفحه دوم-->
-    <div class="z-20 overflow-hidden">
-      <div class="w-[30vw] h-[30vw] flex rounded-full absolute top-50z left-50z  bg-D4CEFF"></div>
-      <div class="w-[30vw] h-[30vw] flex rounded-full absolute bottom-50z right-50z  bg-2E2857"></div>
-      2222222222222222222222222222222222
+    <div
+      class="flex justify-center items-center z-20 overflow-hidden  min-w-screen max-w-screen min-h-screen max-h-screen">
+      <div class="w-[300px] h-[300px] flex justify-end items-end rounded-full absolute top-50z left-50z  bg-D4CEFF">
+
+        <figure class="translate-10">
+          <img src="assets/img/lightning.png" alt="">
+        </figure>
+      </div>
+      <div class="w-[300px] h-[300px] flex rounded-full absolute bottom-50z right-50z  bg-2E2857">
+        <figure>
+          <img src="assets/img/sun-clouds-rain.png" alt="">
+        </figure>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-2">
+        <div>
+          <figure>
+            <img src="assets/img/WE THER.png" alt="">
+          </figure>
+        </div>
+        <div class="flex justify-center items-center gap-12">
+          <div class="translate-[-20px , -35px]" style="transform: translate(35px,-35px);mix-blend-mode: overlay;">
+            <figure>
+              <img src="assets/img/A.png" alt="">
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img src="assets/img/PP.png" alt="">
+            </figure>
+          </div>
+        </div>
+        <div style="transform: translate(25px,-35px);">
+          <figure>
+            <img src="assets/img/Rectangle 1 (1).png" alt="">
+          </figure>
+        </div>
+      </div>
     </div>
     <!-- صفحه سوم-->
-    <div class="z-10 overflow-hidden">
-      3333333333333333333333333333333333333333333333333333333333333333333
-      <div class="w-[30vw] h-[30vw] flex rounded-full absolute top-50z left-50z  bg-D4CEFF"></div>
-      <div class="w-[30vw] h-[30vw] flex rounded-full absolute bottom-50z right-50z  bg-2E2857"></div>
+    <div
+      class="flex justify-center items-center flex-col z-10 overflow-hidden pt-52   min-w-screen max-w-screen min-h-screen max-h-screen">
+      <div class="absolute top-[85%] left-[45%] z-50">
+        <div class=" btn-start cursor-pointer bg-3D357B rounded-2xl px-5 py-3  text-7768E3">Start App</div>
+      </div>
+      <div id="profile-wrap">
+        <div class="pulse1">
+        </div>
+        <div class="pulse2"></div>
+        <div class="profile-overlay"></div>
+        <div class="profile-image">
+          <img class="object-contain" src="assets/img/1736542932487-removebg-preview.png" width="200" alt="">
+        </div>
+        <div class="profile-name">
+          <h2>Hi, I'm ali sabouri frontend web developer</h2>
+        </div>
+        <div class="profile-social">
+          <ul>
+            <li><a class="" href="https://www.instagram.com/alies_7568/profilecard/?igsh=MTV6NXZzZDNxdzNreQ=="
+                data-toggle="tooltip" title="instagram" target="_blank">
+                <svg class="w-5 h-5 fill-1F1B3D" id="instagram" role="img" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <title>Instagram</title>
+                  <path
+                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+                </svg> </a></li>
+            <li><a href="https://github.com/alisabouri68" data-toggle="tooltip" title="github" target="_blank">
+                <svg class="w-5 h-5 fill-1F1B3D" id="github" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                  viewBox="0 0 32 32">
+                  <path
+                    d="M16,2.345c7.735,0,14,6.265,14,14-.002,6.015-3.839,11.359-9.537,13.282-.7,.14-.963-.298-.963-.665,0-.473,.018-1.978,.018-3.85,0-1.312-.437-2.152-.945-2.59,3.115-.35,6.388-1.54,6.388-6.912,0-1.54-.543-2.783-1.435-3.762,.14-.35,.63-1.785-.14-3.71,0,0-1.173-.385-3.85,1.435-1.12-.315-2.31-.472-3.5-.472s-2.38,.157-3.5,.472c-2.677-1.802-3.85-1.435-3.85-1.435-.77,1.925-.28,3.36-.14,3.71-.892,.98-1.435,2.24-1.435,3.762,0,5.355,3.255,6.563,6.37,6.913-.403,.35-.77,.963-.893,1.872-.805,.368-2.818,.963-4.077-1.155-.263-.42-1.05-1.452-2.152-1.435-1.173,.018-.472,.665,.017,.927,.595,.332,1.277,1.575,1.435,1.978,.28,.787,1.19,2.293,4.707,1.645,0,1.173,.018,2.275,.018,2.607,0,.368-.263,.787-.963,.665-5.719-1.904-9.576-7.255-9.573-13.283,0-7.735,6.265-14,14-14Z">
+                  </path>
+                </svg>
+            <li><a
+                href="https://www.linkedin.com/in/ali-emami-aa9885315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                data-toggle="tooltip" title="linkdin" target="_blank">
+                <svg class="w-5 h-5 fill-1F1B3D" id="linkdin" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                  viewBox="0 0 32 32">
+                  <path
+                    d="M26.111,3H5.889c-1.595,0-2.889,1.293-2.889,2.889V26.111c0,1.595,1.293,2.889,2.889,2.889H26.111c1.595,0,2.889-1.293,2.889-2.889V5.889c0-1.595-1.293-2.889-2.889-2.889ZM10.861,25.389h-3.877V12.87h3.877v12.519Zm-1.957-14.158c-1.267,0-2.293-1.034-2.293-2.31s1.026-2.31,2.293-2.31,2.292,1.034,2.292,2.31-1.026,2.31-2.292,2.31Zm16.485,14.158h-3.858v-6.571c0-1.802-.685-2.809-2.111-2.809-1.551,0-2.362,1.048-2.362,2.809v6.571h-3.718V12.87h3.718v1.686s1.118-2.069,3.775-2.069,4.556,1.621,4.556,4.975v7.926Z"
+                    fill-rule="evenodd"></path>
+                </svg>
+          </ul>
+        </div>
+      </div>
+      <div class="w-[300px] h-[300px] flex justify-end items-end rounded-full absolute top-50z left-50z  bg-D4CEFF">
+        <figure class="translate-10">
+          <img src="assets/img/sun-clouds.png" alt="">
+        </figure>
+      </div>
+      <div class="w-[300px] h-[300px] flex rounded-full absolute bottom-50z right-50z  bg-2E2857">
+        <figure>
+          <img src="assets/img/sun.png" alt="">
+        </figure>
+      </div>
+
     </div>
+    <!--  -->
   </div>
+  <script src="assets/script/slider.js"></script>
   <script src="assets/script/app.js"></script>
 </body>
 ّ
