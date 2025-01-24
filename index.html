@@ -21,22 +21,29 @@
       stroke="currentColor" class="size-6">
       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </symbol>
-    <symbol id="arrowUp" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <symbol id="arrowUp" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="size-6">
       <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
     </symbol>
-    <symbol id="arrowDown" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <symbol id="arrowDown" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="size-6">
       <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
     </symbol>
-    <symbol id="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <symbol id="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="size-6">
       <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
     </symbol>
-    
+    <symbol id="arrow-left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+    </symbol>
+
   </svg>
   <main class="min-w-screen max-w-screen min-h-screen max-h-screen overflow-hidden flex justify-center items-center">
     <section
       class="section min-w-screen max-w-screen min-h-screen max-h-screen overflow-hidden flex justify-around items-center flex-col *:w-full">
       <!-- main top -->
-       <div class=" p-5 flex justify-around">
+      <div class=" p-5 flex justify-around">
         <div>
           <button id="location-btn">
             <span>
@@ -61,7 +68,7 @@
         </div>
       </div>
       <!-- main middle -->
-       <div class=" flex flex-col justify-center items-center gap-3">
+      <div class=" flex flex-col justify-center items-center gap-3">
         <div class="">
           <h3 class="text-[3vw] font-extrabold text-BEB4FE" id="city"></h3>
         </div>
@@ -76,7 +83,7 @@
         </div>
         <div class="flex justify-center items-center gap-5">
           <div class="px-4 py-2  bg-CCCCCC rounded-3xl">
-            <span class="text-[4vw] font-extrabold "id="max"></span>
+            <span class="text-[4vw] font-extrabold " id="max"></span>
           </div>
           <div class="">
             <span>
@@ -93,37 +100,182 @@
             </span>
           </div>
           <div class="px-4 py-2  bg-CCCCCC rounded-3xl">
-            <span class="text-[4vw] font-extrabold "id="min"></span>
+            <span class="text-[4vw] font-extrabold " id="min"></span>
           </div>
         </div>
       </div>
       <!-- main bottom -->
-      <div class="absolute min-w-screen max-w-screen min-h-screen max-h-screen  searchc p-10">
-        <div class="flex justify-end items-center">
-          <button id="close-btn">
-            <span>
-              <svg class="w-8 h-8 text-3D357B">
-                <use href="#close">
-                </use>
-              </svg>
-            </span>
-          </button>
+      <div
+        class="absolute min-w-screen max-w-screen min-h-screen max-h-screen flex flex-col justify-start items-start searchc p-5 ">
+        
+        <div class="flex justify-between items-center w-full lg:px-10">
+          <div class="flex justify-start items-center ">
+            <div>
+              <span>
+                <svg class="w-8 gh-8 text-FFFFFF">
+                  <use href="#arrow-left">
+  
+                  </use>
+                </svg>
+              </span>
+            </div>
+            <div>
+              <span class="text-3xl text-FFFFFF font-semibold">WEATHER</span>
+            </div>
+          </div>
+          <div class="flex justify-end items-center">
+            <button id="close-btn">
+              <span>
+                <svg class="w-8 h-8 text-3D357B">
+                  <use href="#close">
+                  </use>
+                </svg>
+              </span>
+            </button>
+          </div>
         </div>
-        <div></div>
-        <div></div>
-        <div class="backgroundimg  gap-3 flex flex-col relative">
-<div>
-  <span class="text-BEB4FE text-6xl font-extrabold" >17°</span>
-</div>
-<div class="flex gap-3">
-  <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50" ><span>H:23 </span></div>
-  <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50" ><span>L:10</span></div>
-</div>
-<div><span class="text-FFFFFF text-4xl font-bold" >Tehran</span></div>
-<div class="absolute -top-10 -right-20 ">
-  <img src="assets/img/sun.png" alt="">
-</div>
+        <div>
+          <div class="relative mb-10  lg:px-10">
+            <div>
+              <input class="outline-none border-none rounded-4xl bg-CCCCCC px-3" type="text" name="" id="search-c"
+                autocomplete="off" placeholder="Search">
+            </div>
+            <div></div>
+          </div>
         </div>
+        <div class="flex flex-wrap justify-center items-center gap-20 overflow-y-scroll">
+          <div class="backgroundimg  gap-3 flex flex-col relative">
+            <div>
+              <span class="text-BEB4FE text-6xl font-extrabold">17°</span>
+            </div>
+            <div class="flex gap-3">
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>H:23 </span></div>
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>L:10</span></div>
+            </div>
+            <div><span class="text-FFFFFF text-4xl font-bold">Tehran</span></div>
+            <div class="absolute -top-10 -right-20 ">
+              <img src="assets/img/sun.png" alt="">
+            </div>
+          </div>
+          <div class="backgroundimg  gap-3 flex flex-col relative">
+            <div>
+              <span class="text-BEB4FE text-6xl font-extrabold">17°</span>
+            </div>
+            <div class="flex gap-3">
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>H:23 </span></div>
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>L:10</span></div>
+            </div>
+            <div><span class="text-FFFFFF text-4xl font-bold">Tehran</span></div>
+            <div class="absolute -top-10 -right-20 ">
+              <img src="assets/img/sun.png" alt="">
+            </div>
+          </div>
+          <div class="backgroundimg  gap-3 flex flex-col relative">
+            <div>
+              <span class="text-BEB4FE text-6xl font-extrabold">17°</span>
+            </div>
+            <div class="flex gap-3">
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>H:23 </span></div>
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>L:10</span></div>
+            </div>
+            <div><span class="text-FFFFFF text-4xl font-bold">Tehran</span></div>
+            <div class="absolute -top-10 -right-20 ">
+              <img src="assets/img/sun.png" alt="">
+            </div>
+          </div>
+          <div class="backgroundimg  gap-3 flex flex-col relative">
+            <div>
+              <span class="text-BEB4FE text-6xl font-extrabold">17°</span>
+            </div>
+            <div class="flex gap-3">
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>H:23 </span></div>
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>L:10</span></div>
+            </div>
+            <div><span class="text-FFFFFF text-4xl font-bold">Tehran</span></div>
+            <div class="absolute -top-10 -right-20 ">
+              <img src="assets/img/sun.png" alt="">
+            </div>
+          </div>
+          <div class="backgroundimg  gap-3 flex flex-col relative">
+            <div>
+              <span class="text-BEB4FE text-6xl font-extrabold">17°</span>
+            </div>
+            <div class="flex gap-3">
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>H:23 </span></div>
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>L:10</span></div>
+            </div>
+            <div><span class="text-FFFFFF text-4xl font-bold">Tehran</span></div>
+            <div class="absolute -top-10 -right-20 ">
+              <img src="assets/img/sun.png" alt="">
+            </div>
+          </div>
+          <div class="backgroundimg  gap-3 flex flex-col relative">
+            <div>
+              <span class="text-BEB4FE text-6xl font-extrabold">17°</span>
+            </div>
+            <div class="flex gap-3">
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>H:23 </span></div>
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>L:10</span></div>
+            </div>
+            <div><span class="text-FFFFFF text-4xl font-bold">Tehran</span></div>
+            <div class="absolute -top-10 -right-20 ">
+              <img src="assets/img/sun.png" alt="">
+            </div>
+          </div>
+          <div class="backgroundimg  gap-3 flex flex-col relative">
+            <div>
+              <span class="text-BEB4FE text-6xl font-extrabold">17°</span>
+            </div>
+            <div class="flex gap-3">
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>H:23 </span></div>
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>L:10</span></div>
+            </div>
+            <div><span class="text-FFFFFF text-4xl font-bold">Tehran</span></div>
+            <div class="absolute -top-10 -right-20 ">
+              <img src="assets/img/sun.png" alt="">
+            </div>
+          </div>
+          <div class="backgroundimg  gap-3 flex flex-col relative">
+            <div>
+              <span class="text-BEB4FE text-6xl font-extrabold">17°</span>
+            </div>
+            <div class="flex gap-3">
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>H:23 </span></div>
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>L:10</span></div>
+            </div>
+            <div><span class="text-FFFFFF text-4xl font-bold">Tehran</span></div>
+            <div class="absolute -top-10 -right-20 ">
+              <img src="assets/img/sun.png" alt="">
+            </div>
+          </div>
+          <div class="backgroundimg  gap-3 flex flex-col relative">
+            <div>
+              <span class="text-BEB4FE text-6xl font-extrabold">17°</span>
+            </div>
+            <div class="flex gap-3">
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>H:23 </span></div>
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>L:10</span></div>
+            </div>
+            <div><span class="text-FFFFFF text-4xl font-bold">Tehran</span></div>
+            <div class="absolute -top-10 -right-20 ">
+              <img src="assets/img/sun.png" alt="">
+            </div>
+          </div>
+          <div class="backgroundimg  gap-3 flex flex-col relative">
+            <div>
+              <span class="text-BEB4FE text-6xl font-extrabold">17°</span>
+            </div>
+            <div class="flex gap-3">
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>H:23 </span></div>
+              <div class="text-CCCCCC text-3xl font-semibold shadow-2xl opacity-50"><span>L:10</span></div>
+            </div>
+            <div><span class="text-FFFFFF text-4xl font-bold">Tehran</span></div>
+            <div class="absolute -top-10 -right-20 ">
+              <img src="assets/img/sun.png" alt="">
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
