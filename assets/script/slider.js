@@ -83,7 +83,7 @@ function srtartshow(a, b) {
   sliderContainer.style.visibility=`${b}`
 }
 window.addEventListener('load',()=>{
-  const start = localStorage.getItem('start')
+  // const start = localStorage.getItem('start')
   console.log(start)
   start === "show"?srtartshow("0" , "hidden"):srtartshow("1" , "visible");
 })
