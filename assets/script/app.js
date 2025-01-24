@@ -7,7 +7,7 @@ const max = document.querySelector("#max");
 const min = document.querySelector("#min");
 function lonlot() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
+    navigator.geolocation.watchPosition(
       (position) => {
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
@@ -16,7 +16,7 @@ function lonlot() {
       },
       (error) => {
         console.error("Error getting location:", error);
-      }
+      },{ enableHighAccuracy: true }
     );
   } else {
     console.error("Geolocation is not supported by this browser.");
