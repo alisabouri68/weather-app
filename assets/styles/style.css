@@ -698,20 +698,11 @@
   .justify-around {
     justify-content: space-around;
   }
-  .justify-between {
-    justify-content: space-between;
-  }
   .justify-center {
     justify-content: center;
   }
   .justify-end {
     justify-content: flex-end;
-  }
-  .justify-evenly {
-    justify-content: space-evenly;
-  }
-  .justify-start {
-    justify-content: flex-start;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -830,6 +821,9 @@
   }
   .text-2E2857 {
     color: var(--color-2E2857);
+  }
+  .text-3D357B {
+    color: var(--color-3D357B);
   }
   .text-7768E3 {
     color: var(--color-7768E3);
@@ -1181,8 +1175,9 @@
 }
 .searchc {
   background-image: linear-gradient(180deg, #8270FA 0%,#3E3673 100%);
-  top: 100%;
+  top: 200%;
   left: 0;
+  transition: all 1s ease-in-out;
 }
 .backgroundimg {
   width: 260px;

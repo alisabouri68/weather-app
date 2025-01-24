@@ -27,6 +27,9 @@
     <symbol id="arrowDown" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
       <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
     </symbol>
+    <symbol id="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </symbol>
     
   </svg>
   <main class="min-w-screen max-w-screen min-h-screen max-h-screen overflow-hidden flex justify-center items-center">
@@ -35,7 +38,7 @@
       <!-- main top -->
        <div class=" p-5 flex justify-around">
         <div>
-          <button>
+          <button id="location-btn">
             <span>
               <svg class="w-8 h-8 text-BEB4FE">
                 <use href="#loc"></use>
@@ -96,6 +99,16 @@
       </div>
       <!-- main bottom -->
       <div class="absolute min-w-screen max-w-screen min-h-screen max-h-screen  searchc p-10">
+        <div class="flex justify-end items-center">
+          <button id="close-btn">
+            <span>
+              <svg class="w-8 h-8 text-3D357B">
+                <use href="#close">
+                </use>
+              </svg>
+            </span>
+          </button>
+        </div>
         <div></div>
         <div></div>
         <div class="backgroundimg  gap-3 flex flex-col relative">

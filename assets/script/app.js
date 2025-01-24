@@ -5,6 +5,9 @@ const uct = document.querySelector("#uct");
 const time = document.querySelector("#time");
 const max = document.querySelector("#max");
 const min = document.querySelector("#min");
+const locationBtn = document.querySelector("#location-btn");
+const searchc = document.querySelector(".searchc");
+const closeBtn = document.querySelector("#close-btn");
 function lonlot() {
   if (navigator.geolocation) {
     navigator.geolocation.watchPosition(
@@ -12,7 +15,7 @@ function lonlot() {
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
         console.log(`Latitude: ${lat}, Longitude: ${lon}`);
-        fetchLocLat(lat, lon);
+        // fetchLocLat(lat, lon);
       },
       (error) => {
         console.error("Error getting location:", error);
@@ -58,6 +61,9 @@ function fetchLocLat(lat, lon) {
 }
 lonlot();
 
+locationBtn.addEventListener('click',()=>tooooop("0"))
 
-
-
+closeBtn.addEventListener('click',()=>tooooop("200"))
+function tooooop(a) {
+  searchc.style.top = `${a}%`
+}
