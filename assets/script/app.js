@@ -92,7 +92,7 @@ window.addEventListener('load',lonlot)
 });
 searchl.addEventListener("keyup", (e) => {
   if (e.keyCode == 13 || e.which == 13) {
-    valueInput2 = c;
+    valueInput2 = e.target.value;
     xxx(valueInput2);
     e.target.value=""
   }
